@@ -27,6 +27,8 @@ func main() {
 		untar(os.Args[1])
 	case "url_encoding":
 		url_encoding()
+	case "file_types":
+		file_types(os.Args[1])
 	default:
 		fmt.Printf("No function for program %s\n", program)
 	}

@@ -25,10 +25,15 @@ Make sure I underswtand Go's pointers
 Experiment with Go's type system and how it allocates memory
 
 ## stuff
-just a random collection of stuff
+Just a random collection of stuff
 
 ## untar
-developing and experimenting with using `git archive` and handling the resulting `tar` archive
+Developing and experimenting with using `git archive` and handling the resulting `tar` archive
+This command requires a second command line paramete: a directory path that is a git repository.
 
 ## url_encoding
-playing around with URL encoding
+Playing around with URL encoding
+
+## file_types
+Experiment with using `enry` to determine the programming language of a file.
+This command requires the git repository https://github.com/kanaka/mal to be cloned locally, and the path to that directory passed as the second command line argument.
