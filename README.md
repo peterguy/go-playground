@@ -26,3 +26,6 @@ Experiment with Go's type system and how it allocates memory
 
 ## stuff
 just a random collection of stuff
+
+## untar
+developing and experimenting with using `git archive` and handling the resulting `tar` archive

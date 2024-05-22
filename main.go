@@ -23,6 +23,8 @@ func main() {
 		struct_types()
 	case "stuff":
 		stuff()
+	case "untar":
+		untar(os.Args[1])
 	default:
 		fmt.Printf("No function for program %s\n", program)
 	}
