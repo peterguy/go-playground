@@ -35,5 +35,9 @@ This command requires a second command line paramete: a directory path that is a
 Playing around with URL encoding
 
 ## file_types
-Experiment with using `enry` to determine the programming language of a file.
-This command requires the git repository https://github.com/kanaka/mal to be cloned locally, and the path to that directory passed as the second command line argument.
+Experiment with using [enry](https://github.com/go-enry/go-enry) to determine the programming language of a file.
+This command requires the [kanaka/mal repo](https://github.com/kanaka/mal) to be cloned locally, and the path to that directory passed as the second command line argument.
+
+## file_read
+Experiment with reading bytes from a file while reliably counting lines.
+This command requires the [kanaka/mal repo](https://github.com/kanaka/mal) to be cloned locally, and the path to that directory passed as the second command line argument.
