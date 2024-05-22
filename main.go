@@ -17,6 +17,8 @@ func main() {
 		pipe_commands()
 	case "lipsum":
 		lipsum()
+	case "struct_pointers":
+		struct_pointers()
 	default:
 		fmt.Printf("No function for program %s\n", program)
 	}

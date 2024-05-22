@@ -14,3 +14,9 @@ go run . <program>
 ## pipe_commands
 Experimenting with piping the output from one command into another.
 The basic test is piping the output from an `echo` command to a `wc` command.
+
+## lipsum
+Play around with generating Lorem Ipsum in Go
+
+## struct_pointers
+Make sure I underswtand Go's pointers
