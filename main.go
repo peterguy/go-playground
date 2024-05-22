@@ -39,6 +39,8 @@ func main() {
 		file_name_from_language()
 	case "composition":
 		composition()
+	case "execute":
+		execute()
 	default:
 		fmt.Printf("No function for program %s\n", program)
 	}

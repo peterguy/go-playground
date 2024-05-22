@@ -54,3 +54,6 @@ More work with [enry](https://github.com/go-enry/go-enry), but this time the oth
 
 ## composition
 Play around with [composition](https://www.codecademy.com/resources/docs/go/composition)
+
+## execute
+Illustrate how `os/exec` handles input, whether it's a slice or not.
