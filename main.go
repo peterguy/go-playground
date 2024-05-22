@@ -35,6 +35,8 @@ func main() {
 		pointers()
 	case "unique":
 		unique()
+	case "file_name_from_language":
+		file_name_from_language()
 	default:
 		fmt.Printf("No function for program %s\n", program)
 	}
