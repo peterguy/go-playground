@@ -19,6 +19,8 @@ func main() {
 		lipsum()
 	case "struct_pointers":
 		struct_pointers()
+	case "struct_types":
+		struct_types()
 	default:
 		fmt.Printf("No function for program %s\n", program)
 	}

@@ -20,3 +20,6 @@ Play around with generating Lorem Ipsum in Go
 
 ## struct_pointers
 Make sure I underswtand Go's pointers
+
+## struct_types
+Experiment with Go's type system and how it allocates memory
