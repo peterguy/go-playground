@@ -23,3 +23,6 @@ Make sure I underswtand Go's pointers
 
 ## struct_types
 Experiment with Go's type system and how it allocates memory
+
+## stuff
+just a random collection of stuff

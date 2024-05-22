@@ -21,6 +21,8 @@ func main() {
 		struct_pointers()
 	case "struct_types":
 		struct_types()
+	case "stuff":
+		stuff()
 	default:
 		fmt.Printf("No function for program %s\n", program)
 	}
