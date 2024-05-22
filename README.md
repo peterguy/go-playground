@@ -57,3 +57,10 @@ Play around with [composition](https://www.codecademy.com/resources/docs/go/comp
 
 ## execute
 Illustrate how `os/exec` handles input, whether it's a slice or not.
+
+## secure_storage
+First pass at figuring out how to store secrets in the operating system's secure storage (aka keychains or keyrings)
+There are two commands here:
+1. `secure_store` - stores the secret passed as the second command line argument in the OS' secure storage
+2. `secure_retrieve` - retrieves the secret stored in the OS' secure storage and prints it to stdout
+Different operating systems use different secure storage mechanisms. Currently only macOS is supported.

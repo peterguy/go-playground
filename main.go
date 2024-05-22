@@ -41,6 +41,19 @@ func main() {
 		composition()
 	case "execute":
 		execute()
+	case "secure_store":
+		secret := os.Args[1]
+		err := secure_store("https://example.com", "peterguy", []byte(secret))
+		if err != nil {
+			fmt.Printf("ERROR storing secret: %v\n", err)
+		}
+	case "secure_retrieve":
+		secret, err := secure_retrieve("https://exmaple.com", "peterguy")
+		if err != nil {
+			fmt.Printf("ERROR retrieving secret: %v\n", err)
+		} else {
+			fmt.Printf("secret: %s\n", string(secret))
+		}
 	default:
 		fmt.Printf("No function for program %s\n", program)
 	}
