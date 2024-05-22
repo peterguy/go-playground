@@ -33,6 +33,8 @@ func main() {
 		file_read(os.Args[1])
 	case "pointers":
 		pointers()
+	case "unique":
+		unique()
 	default:
 		fmt.Printf("No function for program %s\n", program)
 	}

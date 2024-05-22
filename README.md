@@ -45,3 +45,5 @@ This command requires the [kanaka/mal repo](https://github.com/kanaka/mal) to be
 ## pointers
 More poking around with Go pointers and return by value vs return by reference.
 
+## unique
+Experiment with an algorithm to sort and uniqify a slice in place.
