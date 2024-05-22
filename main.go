@@ -31,6 +31,8 @@ func main() {
 		file_types(os.Args[1])
 	case "file_read":
 		file_read(os.Args[1])
+	case "pointers":
+		pointers()
 	default:
 		fmt.Printf("No function for program %s\n", program)
 	}

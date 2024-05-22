@@ -41,3 +41,7 @@ This command requires the [kanaka/mal repo](https://github.com/kanaka/mal) to be
 ## file_read
 Experiment with reading bytes from a file while reliably counting lines.
 This command requires the [kanaka/mal repo](https://github.com/kanaka/mal) to be cloned locally, and the path to that directory passed as the second command line argument.
+
+## pointers
+More poking around with Go pointers and return by value vs return by reference.
+
