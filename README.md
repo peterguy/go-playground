@@ -29,3 +29,6 @@ just a random collection of stuff
 
 ## untar
 developing and experimenting with using `git archive` and handling the resulting `tar` archive
+
+## url_encoding
+playing around with URL encoding
