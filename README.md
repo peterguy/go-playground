@@ -10,6 +10,7 @@ go run . <program>
 ```
 
 # programs
+Arranged in order of addition
 
 ## pipe_commands
 Experimenting with piping the output from one command into another.
@@ -50,3 +51,6 @@ Experiment with an algorithm to sort and uniqify a slice in place.
 
 ## file_name_from_language
 More work with [enry](https://github.com/go-enry/go-enry), but this time the other way around: determine the file name from a given language. Generates a regular expression designed to encompass all of the file names/extensions that could be associated with the given language.
+
+## composition
+Play around with [composition](https://www.codecademy.com/resources/docs/go/composition)

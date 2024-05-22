@@ -37,6 +37,8 @@ func main() {
 		unique()
 	case "file_name_from_language":
 		file_name_from_language()
+	case "composition":
+		composition()
 	default:
 		fmt.Printf("No function for program %s\n", program)
 	}
