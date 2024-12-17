@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"sort"
 	"strings"
 
@@ -89,7 +90,8 @@ func PrintFileNamesAndExtensionsForLanguage(language string) {
 	}
 }
 
-func file_name_from_language(language string) {
+func main() {
+	language := os.Args[1]
 	PrintFileNamesAndExtensionsForLanguage(language)
 	fileRegexp := LangToFileRegexp(language)
 	fmt.Println(fileRegexp)
