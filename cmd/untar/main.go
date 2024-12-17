@@ -361,7 +361,7 @@ func main() {
 	// archive the commit
 	archiveCmd := exec.CommandContext(ctx, "git", "archive", "--format=tar", "--verbose", "HEAD")
 	archiveCmd.Dir = dir
-	archiveCmd.Env = append(os.Environ())
+	archiveCmd.Env = os.Environ()
 
 	// connect the archive to the untar process
 	stdout, err := archiveCmd.StdoutPipe()
