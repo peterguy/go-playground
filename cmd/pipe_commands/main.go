@@ -11,7 +11,7 @@ import (
 	"time"
 )
 
-func pipe_commands() {
+func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), 100*time.Millisecond)
 	defer cancel()
 	var echoStderr bytes.Buffer
