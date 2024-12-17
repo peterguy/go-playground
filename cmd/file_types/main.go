@@ -7,7 +7,8 @@ import (
 	"github.com/go-enry/go-enry/v2"
 )
 
-func file_types(malDir string) {
+func main() {
+	malDir := os.Args[1]
 	filePath := malDir + "impls/ocaml/.xml.template"
 	langs := enry.GetLanguagesByFilename(filePath, nil, nil)
 	fmt.Printf("=== languages by filename ===\n")
