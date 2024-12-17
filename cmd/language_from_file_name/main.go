@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
+	"os"
 
 	"github.com/go-enry/go-enry/v2"
 )
 
-func language_from_file_name(fileName string) {
+func main() {
+	fileName := os.Args[1]
 	// Get possible languages for the given file name
 	languages := enry.GetLanguages(fileName, nil)
 
