@@ -19,7 +19,7 @@ func getOff(off string) any {
 	return mapOff[off].Offf()
 }
 
-func struct_types() {
+func main() {
 	x := getOff("off")
 	fmt.Printf("%p\n", x)
 	y := getOff("off")
