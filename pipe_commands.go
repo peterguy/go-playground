@@ -27,7 +27,6 @@ func pipe_commands() {
 		log.Fatalf("starting wc process: %s", err)
 	}
 	if err := echoCmd.Run(); err != nil {
-
 		log.Fatalf("running echo process: %s", echoCmd.String())
 	}
 	if err := wcCmd.Wait(); err != nil {

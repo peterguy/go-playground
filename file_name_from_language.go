@@ -62,8 +62,35 @@ func LangToFileRegexp(lang string) string {
 	return UnionRegExps(patterns)
 }
 
-func file_name_from_language() {
-	lang := "xml"
-	fileRegexp := LangToFileRegexp(lang)
+func PrintFileNamesAndExtensionsForLanguage(language string) {
+	language, _ = enry.GetLanguageByAlias(language) // Normalize language name
+
+	fmt.Printf("File names and extensions for %s:\n", language)
+
+	// Print file names
+	if fileNames, ok := filenamesFromLanguage[language]; ok && len(fileNames) > 0 {
+		fmt.Println("File names:")
+		for _, fileName := range fileNames {
+			fmt.Printf("- %s\n", fileName)
+		}
+	} else {
+		fmt.Println("No specific file names found for this language.")
+	}
+
+	// Print extensions
+	extensions := enry.GetLanguageExtensions(language)
+	if len(extensions) > 0 {
+		fmt.Println("Extensions:")
+		for _, ext := range extensions {
+			fmt.Printf("- %s\n", ext)
+		}
+	} else {
+		fmt.Println("No extensions found for this language.")
+	}
+}
+
+func file_name_from_language(language string) {
+	PrintFileNamesAndExtensionsForLanguage(language)
+	fileRegexp := LangToFileRegexp(language)
 	fmt.Println(fileRegexp)
 }
