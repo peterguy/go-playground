@@ -345,7 +345,8 @@ func withDir(path string, fn func() error) error {
 	return fn()
 }
 
-func untar(dir string) {
+func main() {
+	dir := os.Args[1]
 	ctx, cancel := context.WithTimeout(context.Background(), 1000*time.Millisecond)
 	defer cancel()
 
