@@ -5,7 +5,7 @@ import (
 	"net/url"
 )
 
-func url_encoding() {
+func main() {
 	path := "some-path-here"
 	secret := "foo bar"
 	u, err := url.Parse("https://example.com/")

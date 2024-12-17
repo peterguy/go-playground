@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func unique() {
+func main() {
 	x := []string{"z", "a", "c", "a", "b", "c", "c", "d", "e", "f", "g", "h", "h", "h"}
 	sort.Strings(x)
 	u := 0

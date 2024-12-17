@@ -17,7 +17,7 @@ func (c *Child) Goodbye() string {
 	return "Goodbye from Child"
 }
 
-func composition() {
+func main() {
 	c := Child{}
 	var p Parent = &c
 	fmt.Println(p.Hello())

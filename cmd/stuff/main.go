@@ -14,7 +14,7 @@ func TestX(t *testing.T) {
 	require.Greater(t, int8(10), a)
 }
 
-func stuff() {
+func main() {
 	stuff := `
 hello
 world

@@ -14,7 +14,7 @@ func return_by_reference() *[]byte {
 	return &buf
 }
 
-func pointers() {
+func main() {
 	buf := return_by_value()
 	fmt.Printf("address of buf returned by value: %p\n", buf)
 	buf2 := return_by_reference()
