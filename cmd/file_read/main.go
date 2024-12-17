@@ -8,7 +8,8 @@ import (
 
 var newLine = []byte{'\n'}
 
-func file_read(malDir string) {
+func main() {
+	malDir := os.Args[1]
 	filePath := malDir + "impls/cs/step3_env.cs"
 	file, err := os.Open(filePath)
 	if err != nil {
