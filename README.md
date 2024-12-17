@@ -10,7 +10,7 @@ go run . <program>
 ```
 
 # programs
-Arranged in order of addition
+Arranged in order of addition (mostly)
 
 ## pipe_commands
 Experimenting with piping the output from one command into another.
@@ -37,7 +37,7 @@ Playing around with URL encoding
 
 ## file_types
 Experiment with using [enry](https://github.com/go-enry/go-enry) to determine the programming language of a file.
-This command requires the [kanaka/mal repo](https://github.com/kanaka/mal) to be cloned locally, and the path to that directory passed as the second command line argument.
+This command requires the [kanaka/mal repo](https://github.com/kanaka/mal) to be cloned locally, and the path to that directory passed as the command line argument.
 
 ## file_read
 Experiment with reading bytes from a file while reliably counting lines.
@@ -51,6 +51,9 @@ Experiment with an algorithm to sort and uniqify a slice in place.
 
 ## file_name_from_language
 More work with [enry](https://github.com/go-enry/go-enry), but this time the other way around: determine the file name from a given language. Generates a regular expression designed to encompass all of the file names/extensions that could be associated with the given language.
+
+## language_from_file_name
+The opposite of `file_name_from_language`.
 
 ## composition
 Play around with [composition](https://www.codecademy.com/resources/docs/go/composition)
