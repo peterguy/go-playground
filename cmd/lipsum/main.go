@@ -9,7 +9,7 @@ import (
 	"gopkg.in/loremipsum.v1"
 )
 
-func lipsum() {
+func main() {
 	count := 50
 	unit := "paragraphs"
 	if len(os.Args) >= 3 {
