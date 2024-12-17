@@ -64,3 +64,11 @@ There are two commands here:
 1. `secure_store` - stores the secret passed as the second command line argument in the OS' secure storage
 2. `secure_retrieve` - retrieves the secret stored in the OS' secure storage and prints it to stdout
 Different operating systems use different secure storage mechanisms. Currently only macOS is supported.
+
+I've experimented with various ways to make it work in Linux.
+
+To run the secure storage under Linux, build a Docker container with GNOME keyring:
+```
+docker build -f secure_storage.dockerfile -t secure_storage_image .
+docker run -it -v $(pwd):/src secure_storage_image
+```
