@@ -7,7 +7,7 @@ type Person struct {
 	Age  int
 }
 
-func struct_pointers() {
+func main() {
 	// create a new person
 	p := Person{"Alice", 25}
 
