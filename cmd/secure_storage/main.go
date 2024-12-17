@@ -48,11 +48,22 @@ func secure_retrieve(service, account string) ([]byte, error) {
 }
 
 func main() {
-	secret := os.Args[1]
+	action := os.Args[1]
 	secure_store_service := "example.com"
 	secure_store_account := "peterguy"
-	err := secure_store(secure_store_service, secure_store_account, []byte(secret))
-	if err != nil {
-		fmt.Printf("ERROR storing secret: %v\n", err)
+	switch action {
+	case "store":
+		secret := os.Args[2]
+		err := secure_store(secure_store_service, secure_store_account, []byte(secret))
+		if err != nil {
+			fmt.Printf("ERROR storing secret: %v\n", err)
+		}
+	case "retrieve":
+		secret, err := secure_retrieve(secure_store_service, secure_store_account)
+		if err != nil {
+			fmt.Printf("ERROR retrieving secret: %v\n", err)
+		} else {
+			fmt.Printf("secret: %s\n", string(secret))
+		}
 	}
 }
