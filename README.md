@@ -3,11 +3,7 @@ A place to play with Go code
 
 In the spirit of [the Go playground](https://go.dev/play/), this repo holds experiments and one-offs in Go programming.
 
-The current hacky way to run the desired program/module is to go through the `main` program, passing the desired program as the first command line argument:
-
-```
-go run . <program>
-```
+To run each program, use `go run ./cmd/<program name>`
 
 # programs
 Arranged in order of addition (mostly)
@@ -75,3 +71,9 @@ To run the secure storage under Linux, build a Docker container with GNOME keyri
 docker build -f secure_storage.dockerfile -t secure_storage_image .
 docker run -it -v $(pwd):/src secure_storage_image
 ```
+
+## led
+A program to print out the seven-segment display for an integer
+
+## histogram
+Prints out a histogram of random number distribution segmented into buckets
