@@ -1,81 +1,44 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
 	"strconv"
 )
 
 func main() {
-	input := os.Args[1]
-	_, err := strconv.Atoi(input)
-	if err != nil {
-		fmt.Printf("Please give me integers to display, not %q\n", input)
-		os.Exit(1)
-	}
-	height := 1
-	width := 1
+	numerals_flag := flag.String("numerals", "0123456789", "numerals to display")
+	height_flag := flag.Int("height", 1, "the height of the seven-segment display")
+	width_flag := flag.Int("width", 1, "the width of the seven-segment display")
 
-	if len(os.Args) > 2 {
-		height, err = strconv.Atoi(os.Args[2])
-		if err != nil {
-			fmt.Printf("Please give me a height integer, not %q\n", os.Args[2])
-			os.Exit(1)
-		}
-	}
+	flag.Parse()
 
-	if len(os.Args) > 3 {
-		width, err = strconv.Atoi(os.Args[3])
+	numerals := *numerals_flag
+	height := *height_flag
+	width := *width_flag
+
+	for _, n := range numerals {
+		_, err := strconv.Atoi(string(n))
 		if err != nil {
-			fmt.Printf("Please give me a width integer, not %q\n", os.Args[3])
+			fmt.Printf("Please give me numerals to display, not %q\n", numerals)
 			os.Exit(1)
 		}
 	}
 
 	// does line-based rendering, which has been superceded by segment-based rendering
 	// because segment-based rendering allows for size adjustments more easily
-	write_input_lines(input)
+	// line-based rendering does not handle height or width
+	// write_input_lines(numerals)
 
 	var lines []string = make([]string, 2*(height-1)+3)
-	line_index := 0
 
-	line := ""
-	for _, digit := range input {
-		line += write_top_segments(digit, width)
-	}
-	lines[line_index] = line
-	line_index++
+	// write the first line of output across all numerals
+	lines[0] = write_top_segments(numerals, width)
 
-	for h := 1; h < height; h++ {
-		line = ""
-		for _, digit := range input {
-			line += write_middle_segments(digit, width, true)
-		}
-		lines[line_index] = line
-		line_index++
-	}
+	copy(lines[1:], write_middle_segments_with_height(numerals, height, width))
 
-	line = ""
-	for _, digit := range input {
-		line += write_middle_segments(digit, width, false)
-	}
-	lines[line_index] = line
-	line_index++
-
-	for h := 1; h < height; h++ {
-		line = ""
-		for _, digit := range input {
-			line += write_bottom_segments(digit, width, true)
-		}
-		lines[line_index] = line
-		line_index++
-	}
-
-	line = ""
-	for _, digit := range input {
-		line += write_bottom_segments(digit, width, false)
-	}
-	lines[line_index] = line
+	copy(lines[1+height:], write_bottom_segments_with_height(numerals, height, width))
 
 	for _, line := range lines {
 		fmt.Println(line)
