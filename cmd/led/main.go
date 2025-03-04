@@ -31,16 +31,13 @@ func main() {
 	// line-based rendering does not handle height or width
 	// write_input_lines(numerals)
 
-	var lines []string = make([]string, 2*(height-1)+3)
+	digits, err := DigitsFromString(numerals)
+	if err != nil {
+		fmt.Println(err)
+		os.Exit(1)
+	}
 
-	// write the first line of output across all numerals
-	lines[0] = write_top_segments(numerals, width)
-
-	copy(lines[1:], write_middle_segments_with_height(numerals, height, width))
-
-	copy(lines[1+height:], write_bottom_segments_with_height(numerals, height, width))
-
-	for _, line := range lines {
+	for _, line := range write_all_segments(digits, height, width) {
 		fmt.Println(line)
 	}
 }
