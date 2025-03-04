@@ -8,6 +8,8 @@ require (
 	github.com/99designs/keyring v1.2.2
 	github.com/go-enry/go-enry/v2 v2.8.4
 	github.com/grafana/regexp v0.0.0-20221123153739-15dc172cd2db
+	github.com/keegancsmith/sqlf v1.1.2
+	github.com/lib/pq v1.2.0
 	github.com/sourcegraph/sourcegraph/lib v0.0.0-20240522181753-fdb14b09d7f2
 	github.com/stretchr/testify v1.8.4
 	gopkg.in/loremipsum.v1 v1.1.2
