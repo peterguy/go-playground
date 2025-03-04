@@ -77,3 +77,6 @@ A program to print out the seven-segment display for an integer
 
 ## histogram
 Prints out a histogram of random number distribution segmented into buckets
+
+## sqlf
+Experiments with `sqlf`, query parameters, and `ILIKE`
