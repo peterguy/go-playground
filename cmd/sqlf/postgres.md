@@ -18,7 +18,7 @@ PGPASSWORD=mypassword psql -h localhost -p 5433 -U myuser -d mydatabase
 Once connected, run these SQL commands to create the table and fill it with test data.
 You can stay connected and run other commands, like `SELECT * FROM users;`, or inserting more records.
 ```sql
-CREATE TABLE IF NOt EXISTS users (
+CREATE TABLE IF NOT EXISTS users (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL
 );
